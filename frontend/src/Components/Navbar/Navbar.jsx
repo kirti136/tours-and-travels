@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
-import { MdOutlineTravelExplore } from "react-icons/md";
+import { GrVimeo } from "react-icons/gr";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 
@@ -20,7 +20,7 @@ function Navbar() {
         <div className="logoDiv">
           <Link to={"/"} className="logo flex a">
             <h1>
-              <MdOutlineTravelExplore className="icon" /> Voyaze.
+              <GrVimeo className="icon" />oyaze.
             </h1>
           </Link>
         </div>

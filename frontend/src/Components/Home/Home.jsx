@@ -65,7 +65,7 @@ function Home() {
               <input type="range" max={5000} min={1000} />
             </div>
           </div>
-          {/* Sech Bar */}
+          {/* Search Bar */}
           <div className="searchOptions flex">
             <HiFilter className="icon" />
             <span>MORE FILTERS</span>
