@@ -7,14 +7,12 @@ import { TbGridDots } from "react-icons/tb";
 
 function Navbar() {
   const [active, setActive] = useState("navBar");
-  const showNav = ()=>{
-    setActive('navBar activeNavbar')
-  }
-  const closeNav = ()=>{
-    setActive('navBar')
-  }
-
-
+  const showNav = () => {
+    setActive("navBar activeNavbar");
+  };
+  const closeNav = () => {
+    setActive("navBar");
+  };
 
   return (
     <section className="navbarSection">
@@ -22,7 +20,7 @@ function Navbar() {
         <div className="logoDiv">
           <Link to={"/"} className="logo flex a">
             <h1>
-              <MdOutlineTravelExplore className="icon" /> Travel.
+              <MdOutlineTravelExplore className="icon" /> Voyaze.
             </h1>
           </Link>
         </div>
@@ -77,7 +75,7 @@ function Navbar() {
           </div>
         </div>
 
-        <div onClick={showNav} className="toggleNavbar" >
+        <div onClick={showNav} className="toggleNavbar">
           <TbGridDots className="icon" />
         </div>
       </header>
