@@ -13,6 +13,11 @@ import "aos/dist/aos.css";
 
 function Home() {
   const [isMounted, setIsMounted] = useState(false);
+  const [selectedPrice, setSelectedPrice] = useState(2500);
+
+  const handlePriceChange = (e) => {
+    setSelectedPrice(e.target.value);
+  };
 
   useEffect(() => {
     if (!isMounted) {
@@ -58,11 +63,18 @@ function Home() {
           {/* Price Input */}
           <div className="priceInput">
             <div className="label_total flex">
-              <label htmlFor="price">Max price:</label>
-              <h3 className="total">$5000</h3>
+              <label htmlFor="price">Select price:</label>
+              <h3 className="total">${selectedPrice}</h3>
             </div>
             <div className="input flex">
-              <input type="range" max={5000} min={1000} />
+              <input
+                type="range"
+                max={5000}
+                min={500}
+                step={100}
+                value={selectedPrice}
+                onChange={handlePriceChange}
+              />
             </div>
           </div>
           {/* Search Bar */}
