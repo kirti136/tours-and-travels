@@ -25,7 +25,7 @@
   --cardBG: rgb(225, 225, 225);
 }
 
-a {
+.a {
   text-decoration: none;
 }
 
@@ -66,25 +66,25 @@ li {
   cursor: pointer;
 }
 
-.btn a{
-    color: var(--whiteColor);
-    font-weight: 500;
+.btn .a {
+  color: var(--whiteColor);
+  font-weight: 500;
 }
 
-.btn:hover{
-    background: var(--SecondaryColor);
+.btn:hover {
+  background: var(--SecondaryColor);
 }
 
-img,video{
-    width: 100%;
-    height: auto;
+img,
+video {
+  width: 100%;
+  height: auto;
 }
 
-input{
-    font-size: 100%;
+input {
+  font-size: 100%;
 }
 
-body{
-    background: var(--bodyColor);
+body {
+  background: var(--bodyColor);
 }
-
