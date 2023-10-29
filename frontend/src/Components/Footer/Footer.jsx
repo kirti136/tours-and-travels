@@ -149,6 +149,12 @@ function Footer() {
               </li>
             </div>
           </div>
+
+          {/* Footer Div */}
+          <div className="footerDiv flex">
+            <small>BEST TRAVEL WEBSITE THEME</small>
+            <small>COPYRIGHTS RESERVED - TRAVEL 2023</small>
+          </div>
         </div>
       </div>
     </section>
