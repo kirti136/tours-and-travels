@@ -3,7 +3,7 @@ import "./footer.css";
 import { Link } from "react-router-dom";
 import video from "../../Assets/video02.mp4";
 import { FiSend } from "react-icons/fi";
-import { MdOutlineTravelExplore } from "react-icons/md";
+import { GrVimeo } from "react-icons/gr";
 import {
   FaTwitter,
   FaYoutube,
@@ -55,7 +55,8 @@ function Footer() {
             {/* Logo */}
             <div className="logoDiv">
               <Link to={"/"} className="a logo flex">
-                <MdOutlineTravelExplore className="icon" /> Travel.
+                <GrVimeo className="icon" />
+                oyaze.
               </Link>
             </div>
             {/* Paragraph */}
@@ -181,7 +182,7 @@ function Footer() {
           {/* Footer Div */}
           <div className="footerDiv flex">
             <small>BEST TRAVEL WEBSITE THEME</small>
-            <small>COPYRIGHTS RESERVED - TRAVEL 2023</small>
+            <small>COPYRIGHTS RESERVED - Voyaze 2023</small>
           </div>
         </div>
       </div>
