@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 import video from "../../Assets/video01.mp4";
 import { GrLocation } from "react-icons/gr";
@@ -8,8 +8,19 @@ import { FaInstagram } from "react-icons/fa";
 import { BsListUl } from "react-icons/bs";
 import { TbApps } from "react-icons/tb";
 import { LiaTripadvisor } from "react-icons/lia";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    if (!isMounted) {
+      AOS.init({ duration: 2000 });
+      setIsMounted(true);
+    }
+  }, [isMounted]);
+
   return (
     <section className="home">
       <div className="overlay"> </div>
@@ -18,13 +29,17 @@ function Home() {
       <div className="homeContent container">
         {/* Text Div */}
         <div className="textDiv">
-          <span className="smallText">Our Packages</span>
+          <span data-aos="fade-up" className="smallText">
+            Our Packages
+          </span>
 
-          <h1 className="homeTitle">Search you Holiday</h1>
+          <h1 data-aos="fade-up" className="homeTitle">
+            Search you Holiday
+          </h1>
         </div>
 
         {/* Inner Card  */}
-        <div className="cardDiv grid">
+        <div data-aos="fade-up" className="cardDiv grid">
           {/* Destination Input */}
           <div className="destinationInput">
             <label htmlFor="date">Search you destination:</label>
@@ -58,7 +73,7 @@ function Home() {
         </div>
 
         {/* Icons */}
-        <div className="homeFooterIcons flex">
+        <div data-aos="fade-up" className="homeFooterIcons flex">
           <div className="rightIcons">
             <FiFacebook className="icon" />
             <LiaTripadvisor className="icon" />

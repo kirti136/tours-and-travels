@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./main.css";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { BsClipboard2Check } from "react-icons/bs";
 import StarRating from "../StarRating/StarRating";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Data = [
   {
@@ -107,17 +109,28 @@ const Data = [
 ];
 
 function Main() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    if (!isMounted) {
+      AOS.init({ duration: 2000 });
+      setIsMounted(true);
+    }
+  }, [isMounted]);
+
   return (
     <section className="main container section">
       <div className="secTitle">
-        <h3 className="title">Most Visited Destination</h3>
+        <h3 data-aos="fade-up" className="title">
+          Most Visited Destination
+        </h3>
       </div>
 
       <div className="secContent grid">
         {Data.map((data) => {
           return (
             // Individual Cards
-            <div key={data.id} className="singleDestination">
+            <div data-aos="fade-up" key={data.id} className="singleDestination">
               {/* Image */}
               <div className="imageDiv">
                 <img src={data.image} alt={data.destination} />

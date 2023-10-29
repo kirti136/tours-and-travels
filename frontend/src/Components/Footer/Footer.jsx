@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
 import video from "../../Assets/video02.mp4";
@@ -11,7 +11,19 @@ import {
   FaTripadvisor,
 } from "react-icons/fa";
 import { FiChevronRight } from "react-icons/fi";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function Footer() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    if (!isMounted) {
+      AOS.init({ duration: 2000 });
+      setIsMounted(true);
+    }
+  }, [isMounted]);
+
   return (
     <section className="footer">
       <div className="videoDiv">
@@ -19,15 +31,19 @@ function Footer() {
       </div>
 
       <div className="secContent container">
-        <div className="contactDiv flex">
+        <div data-aos="fade-up" className="contactDiv flex">
           <div className="text">
             <small>KEEP IN TOUCH</small>
             <h2>Travel with us</h2>
           </div>
 
           <div className="inputDiv flex">
-            <input type="text" placeholder="Enter Email Address" />
-            <button className="btn flex" type="submit">
+            <input
+              data-aos="fade-up"
+              type="text"
+              placeholder="Enter Email Address"
+            />
+            <button data-aos="fade-up" className="btn flex" type="submit">
               SEND <FiSend className="icon" />
             </button>
           </div>
@@ -43,13 +59,13 @@ function Footer() {
               </Link>
             </div>
             {/* Paragraph */}
-            <div className="footerParagraph">
+            <div data-aos="fade-up" className="footerParagraph">
               "Embark on a journey of unforgettable adventures and discover the
               world's wonders with our travel and tour services. Let us turn
               your dreams into extraordinary memories."
             </div>
             {/* Socials */}
-            <div className="footerSocials flex">
+            <div data-aos="fade-up" className="footerSocials flex">
               <FaTwitter className="icon" />
               <FaYoutube className="icon" />
               <FaInstagramSquare className="icon" />
@@ -60,7 +76,11 @@ function Footer() {
           {/* Links */}
           <div className="footerLinks grid">
             {/* Group 01 */}
-            <div className="linkGroup">
+            <div
+              data-aos-duration="2000"
+              data-aos="fade-up"
+              className="linkGroup"
+            >
               <span className="groupTitle">OUR AGENCY</span>
 
               <li className="footerList flex">
@@ -90,7 +110,11 @@ function Footer() {
             </div>
 
             {/* Group 02 */}
-            <div className="linkGroup">
+            <div
+              data-aos-duration="2000"
+              data-aos="fade-up"
+              className="linkGroup"
+            >
               <span className="groupTitle">PARTNERS</span>
 
               <li className="footerList flex">
@@ -120,7 +144,11 @@ function Footer() {
             </div>
 
             {/* Group 03 */}
-            <div className="linkGroup">
+            <div
+              data-aos-duration="2000"
+              data-aos="fade-up"
+              className="linkGroup"
+            >
               <span className="groupTitle">LAST MINUTE</span>
 
               <li className="footerList flex">
