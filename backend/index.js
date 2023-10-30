@@ -1,13 +1,16 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const multer = require('multer');
 const { connectDB } = require("./config/db.js");
+const { userRouter } = require("./routes/user.route.js");
 
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-
+app.use("/api", userRouter);
 
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Welcome to Voyaze - Tours and Travels" });
