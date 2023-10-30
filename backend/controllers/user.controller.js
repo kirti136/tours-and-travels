@@ -8,7 +8,29 @@ const register = async (req, res) => {
   try {
     const { username, email, password, firstName, lastName, dateOfBirth } =
       req.body;
-    const hashedPassword = await bcrypt.hash(password, 10); // Increase the salt rounds
+
+    // Check if a user with the same username or email already exists
+    const existingUser = await UserModel.findOne({
+      $or: [{ username }, { email }],
+    });
+    if (existingUser) {
+      if (existingUser.username === username) {
+        return res
+          .status(400)
+          .json({
+            message:
+              "Username with this name is already taken. Please use another username.",
+          });
+      } else if (existingUser.email === email) {
+        return res
+          .status(400)
+          .json({
+            message: "You are already a registered user. Please login.",
+          });
+      }
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = new UserModel({
       username,
       email,
@@ -79,7 +101,7 @@ const upload = multer({
 
 const uploadProfilePicture = async (req, res) => {
   try {
-    const userId = req.user._id; 
+    const userId = req.user._id;
     const user = await UserModel.findById(userId);
 
     if (!user) {
