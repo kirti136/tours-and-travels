@@ -193,13 +193,6 @@
   color: var(--whiteColor);
 }
 
-.secContent {
-  grid-template-columns: repeat(2, 1fr);
-}
-.secContent .singleDestination {
-  height: auto;
-}
-
 @media screen and (min-width: 500px) {
   .footer .secContent .footerCard .footerLinks {
     grid-template-columns: repeat(3, 1fr);

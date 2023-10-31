@@ -66,7 +66,7 @@
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: 2s ease;
 }
 .main .secContent .singleDestination .imageDiv:hover img {
@@ -137,25 +137,25 @@
   font-size: 18px;
 }
 
-@media screen and (min-width: 500px) {
-  .title {
-    font-size: 1.5rem;
+@media screen and (min-width: 900px) and (max-width: 2000px) {
+  .main .secContent {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .title::after {
-    width: 155px !important;
-  }
-  .secContent {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .secContent .singleDestination {
+  .main .secContent .singleDestination {
     height: auto;
   }
 }
-@media screen and (min-width: 840px) {
-  .secContent {
-    grid-template-columns: repeat(3, 1fr);
+@media screen and (min-width: 500px) and (max-width: 899px) {
+  .main .title {
+    font-size: 1.5rem;
   }
-  .secContent .singleDestination {
+  .main .title::after {
+    width: 155px !important;
+  }
+  .main .secContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main .secContent .singleDestination {
     height: auto;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

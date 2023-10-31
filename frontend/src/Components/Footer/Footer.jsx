@@ -78,7 +78,7 @@ function Footer() {
           <div className="footerLinks grid">
             {/* Group 01 */}
             <div
-              data-aos-duration="2000"
+              // data-aos-duration="2000"
               data-aos="fade-up"
               className="linkGroup"
             >
@@ -112,7 +112,7 @@ function Footer() {
 
             {/* Group 02 */}
             <div
-              data-aos-duration="2000"
+              // data-aos-duration="2000"
               data-aos="fade-up"
               className="linkGroup"
             >
@@ -146,7 +146,7 @@ function Footer() {
 
             {/* Group 03 */}
             <div
-              data-aos-duration="2000"
+              // data-aos-duration="2000"
               data-aos="fade-up"
               className="linkGroup"
             >

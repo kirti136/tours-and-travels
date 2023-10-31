@@ -25,8 +25,8 @@
   --cardBG: rgb(225, 225, 225);
 }
 
-html{
-  scroll-behavior: smooth ;
+html {
+  scroll-behavior: smooth;
 }
 
 .a {
@@ -94,16 +94,16 @@ body {
 }
 
 @media screen and (min-width: 1240px) {
-  .container{
+  .container {
     width: 80% !important;
     margin: auto !important;
   }
-  .section{
+  .section {
     padding: 6rem 0 4rem;
   }
 }
 @media screen and (min-width: 2560px) {
-  body{
+  body {
     zoom: 1.7;
   }
 }
