@@ -66,7 +66,7 @@
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   transition: 2s ease;
 }
 .main .secContent .singleDestination .imageDiv:hover img {
@@ -158,4 +158,4 @@
   .main .secContent .singleDestination {
     height: auto;
   }
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

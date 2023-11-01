@@ -64,8 +64,8 @@ function Navbar() {
             </li>
 
             <button className="btn">
-              <Link to={"/"} className="a">
-                BOOK NOW
+              <Link to={"/register"} className="a">
+                REGISTER
               </Link>
             </button>
           </ul>

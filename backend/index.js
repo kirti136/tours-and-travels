@@ -9,11 +9,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-app.use("/api", userRouter);
 
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Welcome to Voyaze - Tours and Travels" });
 });
+app.use("/api", userRouter);
+
 
 let PORT = process.env.PORT || 8000;
 
